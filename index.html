@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="ಸರ್ಕಾರಿ ಮತ್ತು ಆನ್‌ಲೈನ್ ಸೇವಾ ಕೇಂದ್ರ - ಆಧಾರ್, ಪ್ಯಾನ್, ಪಾಸ್‌ಪೋರ್ಟ್, ಪಿಂಚಣಿ, ವಿಮೆ ಮತ್ತು ಇತರೆ ಸೇವೆಗಳು">
-<title>ಜನಸೇವಾ ಕೇಂದ್ರ | ಎಲ್ಲಾ ಆನ್‌ಲೈನ್ ಸೇವೆಗಳು</title>
+<title>Gramdevi CSE Center Yellapur | ಗ್ರಾಮದೇವಿ CSE ಸೆಂಟರ್</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--blue:#0757a0;--blue2:#063d73;--green:#11844f;--green2:#0b6c40;--orange:#f59e0b;--bg:#f4f7fb;--text:#172033;--muted:#667085;--border:#dfe6ee}
@@ -33,9 +33,41 @@ section{padding:32px 0}
 .title h2{font-size:27px;line-height:1.3}
 .title p{color:var(--muted);font-size:15px;margin-top:3px}
 .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.service{background:#fff;border:2px solid var(--border);border-radius:15px;padding:18px 14px;cursor:pointer;display:flex;align-items:center;gap:13px;transition:.15s;min-height:84px}
+.service{background:#fff;border:2px solid var(--border);border-radius:16px;padding:0;cursor:pointer;
+display:flex;flex-direction:column;align-items:stretch;gap:0;overflow:hidden;transition:.18s;
+min-height:255px;text-align:left}
 .service:hover,.service:focus{border-color:#8ab5dd;transform:translateY(-1px)}
-.service-icon{width:48px;height:48px;border-radius:13px;background:#eaf4ff;display:grid;place-items:center;font-size:24px;flex:none}
+.service-icon{width:100%;height:165px;border-radius:0;background:#f3f6f9;display:grid;
+place-items:center;font-size:24px;flex:none;position:relative;overflow:hidden;
+border-bottom:1px solid var(--border)}
+
+.service-icon{position:relative}
+.service-icon.image-fallback::before{
+  content:"📄";
+  font-size:58px;
+  line-height:1;
+}
+.service-icon.image-fallback::after{
+  content:"ದಾಖಲೆ";
+  position:absolute;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#fff;
+  color:#667085;
+  border:1px solid #dfe6ee;
+  border-radius:7px;
+  padding:3px 10px;
+  font-size:12px;
+  font-weight:800;
+}
+.service-photo.img-hidden{display:none}
+.service-photo{
+  width:100%;height:165px;object-fit:contain;border-radius:0;
+  border:0;background:#f3f6f9;padding:12px;display:block;
+}
+
+.service > span:last-child{display:block;padding:14px 16px 17px}
 .service h3{font-size:17px;line-height:1.3}
 .service small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
 .detail{display:none;margin-top:20px;background:#fff;border:2px solid #b8d4ed;border-radius:17px;padding:20px;box-shadow:0 8px 24px #183b5d12}
@@ -59,7 +91,7 @@ footer{background:#082f55;color:#dbe9f7;text-align:center;padding:24px;font-size
 footer strong{color:#fff}
 @media(min-width:700px){
  .service-grid{grid-template-columns:repeat(3,1fr);gap:15px}
- .service{min-height:96px;padding:19px}
+ .service{min-height:112px;padding:18px}
 }
 @media(max-width:430px){
  .logo{font-size:18px}.logo-icon{width:38px;height:38px}
@@ -68,9 +100,10 @@ footer strong{color:#fff}
  .hero h1{font-size:29px}
  .hero p{font-size:15px}
  .detail-actions{grid-template-columns:1fr}
- .service{padding:14px 11px}
- .service h3{font-size:15px}
- .service-icon{width:43px;height:43px;font-size:21px}
+ .service{min-height:225px}
+ .service h3{font-size:17px}
+ .service-icon{width:100%;height:140px;font-size:21px;position:relative}
+ .service-photo{width:100%;height:140px}
 }
 </style>
 </head>
@@ -78,7 +111,7 @@ footer strong{color:#fff}
 
 <header>
   <div class="container nav">
-    <a class="logo" href="#"><span class="logo-icon">🏛️</span><span>ಜನಸೇವಾ ಕೇಂದ್ರ</span></a>
+    <a class="logo" href="#"><span class="logo-icon">🏛️</span><span>Gramdevi CSE Center</span></a>
     <a class="nav-call" href="tel:+919731587253">📞 ಕರೆ ಮಾಡಿ</a>
   </div>
 </header>
@@ -87,8 +120,8 @@ footer strong{color:#fff}
 <section class="hero">
   <div class="container">
     <div style="font-size:42px;margin-bottom:6px">🏛️</div>
-    <h1>ಜನಸೇವಾ ಕೇಂದ್ರ</h1>
-    <p>ಎಲ್ಲಾ ಸರ್ಕಾರಿ ಮತ್ತು ಆನ್‌ಲೈನ್ ಸೇವೆಗಳು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ</p>
+    <h1>Gramdevi CSE Center</h1><div style="font-size:18px;font-weight:800;margin-bottom:6px">ಯಲ್ಲಾಪುರ</div>
+    <p>ಎಲ್ಲಾ ಸರ್ಕಾರಿ ಮತ್ತು ಆನ್‌ಲೈನ್ ಸೇವೆಗಳು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ</p><p style="font-size:14px;margin-top:10px;color:#dcecff">ಮಾಲೀಕರು: ಮೋಹನ್ ನಾಯಕ್ (ಮಾಜಿ ಸೈನಿಕ)</p>
     <div class="hero-actions">
       <a class="btn btn-white" href="#services">ಸೇವೆ ಆಯ್ಕೆ ಮಾಡಿ</a>
       <a class="btn btn-green" href="tel:+919731587253">📞 ಕರೆ ಮಾಡಿ</a>
@@ -108,68 +141,69 @@ footer strong{color:#fff}
     <div class="title">
       <h2>ನಿಮಗೆ ಯಾವ ಸೇವೆ ಬೇಕು?</h2>
       <p>ಸೇವೆಯ ಮೇಲೆ ಒತ್ತಿ — ಬೇಕಾಗುವ ದಾಖಲೆಗಳನ್ನು ನೋಡಿ</p>
+      <p style="font-size:12px;margin-top:6px">ದಾಖಲೆಗಳ ಚಿತ್ರಗಳು ಮಾದರಿಗಾಗಿ ಮಾತ್ರ.</p>
     </div>
 
     <div class="service-grid" id="serviceGrid">
-      <button class="service" data-search="ಆಧಾರ್ aadhaar" data-service="ಆಧಾರ್ ಅಪ್‌ಡೇಟ್" data-docs="ವಿಳಾಸದ ದಾಖಲೆ" onclick="selectService(this)">
-        <span class="service-icon">🪪</span><span><h3>ಆಧಾರ್ ಸೇವೆ</h3><small>ಅಪ್‌ಡೇಟ್ / ವಿಳಾಸ ಬದಲಾವಣೆ</small></span>
+      <button class="service" data-search="aadhaar aadhar update address change aadhaar seva" data-service="ಆಧಾರ್ ಅಪ್‌ಡೇಟ್" data-docs="ವಿಳಾಸದ ದಾಖಲೆ" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/A_sample_of_Aadhaar_card.jpg" alt="ಆಧಾರ್ ಅಪ್‌ಡೇಟ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಆಧಾರ್ ಸೇವೆ</h3><small>ಅಪ್‌ಡೇಟ್ / ವಿಳಾಸ ಬದಲಾವಣೆ</small></span>
       </button>
-      <button class="service" data-search="ಪ್ಯಾನ್ pan" data-service="ಪ್ಯಾನ್ ಕಾರ್ಡ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಜನ್ಮ ದಿನಾಂಕದ ದಾಖಲೆ" onclick="selectService(this)">
-        <span class="service-icon">💳</span><span><h3>ಪ್ಯಾನ್ ಕಾರ್ಡ್</h3><small>ಹೊಸ / ಸಂಬಂಧಿತ ಸೇವೆಗಳು</small></span>
+      <button class="service" data-search="pan pancard pan card" data-service="ಪ್ಯಾನ್ ಕಾರ್ಡ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಜನ್ಮ ದಿನಾಂಕದ ದಾಖಲೆ" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://upload.wikimedia.org/wikipedia/commons/3/31/A_sample_of_Permanent_Account_Number_%28PAN%29_Card.jpg" alt="ಪ್ಯಾನ್ ಕಾರ್ಡ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಪ್ಯಾನ್ ಕಾರ್ಡ್</h3><small>ಹೊಸ / ಸಂಬಂಧಿತ ಸೇವೆಗಳು</small></span>
       </button>
-      <button class="service" data-search="ಪಾಸ್‌ಪೋರ್ಟ್ passport" data-service="ಪಾಸ್‌ಪೋರ್ಟ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ವೋಟರ್ ಐಡಿ|ಪ್ಯಾನ್ ಕಾರ್ಡ್|SSLC ಅಂಕಪಟ್ಟಿ|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್" onclick="selectService(this)">
-        <span class="service-icon">🛂</span><span><h3>ಪಾಸ್‌ಪೋರ್ಟ್</h3><small>ಅರ್ಜಿ ಸೇವೆ</small></span>
+      <button class="service" data-search="passport" data-service="ಪಾಸ್‌ಪೋರ್ಟ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ವೋಟರ್ ಐಡಿ|ಪ್ಯಾನ್ ಕಾರ್ಡ್|SSLC ಅಂಕಪಟ್ಟಿ|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://withswag.org/guides/images/india-passport-example.png" alt="ಪಾಸ್‌ಪೋರ್ಟ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಪಾಸ್‌ಪೋರ್ಟ್</h3><small>ಅರ್ಜಿ ಸೇವೆ</small></span>
       </button>
-      <button class="service" data-search="ವೋಟರ್ voter" data-service="ವೋಟರ್ ಐಡಿ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್" onclick="selectService(this)">
-        <span class="service-icon">🗳️</span><span><h3>ವೋಟರ್ ಐಡಿ</h3><small>ಹೊಸ / ತಿದ್ದುಪಡಿ</small></span>
+      <button class="service" data-search="voter voter id election epic" data-service="ವೋಟರ್ ಐಡಿ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://d1uy1wopdv0whp.cloudfront.net/newsimages/news_82024/1723335022900-normal-WIFI.webp" alt="ವೋಟರ್ ಐಡಿ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ವೋಟರ್ ಐಡಿ</h3><small>ಹೊಸ / ತಿದ್ದುಪಡಿ</small></span>
       </button>
-      <button class="service" data-search="ಕರ್ಮಿಕ ಕಾರ್ಮಿಕ karmika" data-service="ಕರ್ಮಿಕ ಕಾರ್ಡ್" data-docs="ಉದ್ಯೋಗ ಪ್ರಮಾಣಪತ್ರ|ಆಧಾರ್ ಕಾರ್ಡ್|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್|ರೇಷನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
-        <span class="service-icon">👷</span><span><h3>ಕರ್ಮಿಕ ಕಾರ್ಡ್</h3><small>ಕಾರ್ಮಿಕ ಸೇವೆಗಳು</small></span>
+      <button class="service" data-search="karmika karmik labour worker labor card" data-service="ಕರ್ಮಿಕ ಕಾರ್ಡ್" data-docs="ಉದ್ಯೋಗ ಪ್ರಮಾಣಪತ್ರ|ಆಧಾರ್ ಕಾರ್ಡ್|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್|ರೇಷನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Labor_card.jpg" alt="ಕರ್ಮಿಕ ಕಾರ್ಡ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಕರ್ಮಿಕ ಕಾರ್ಡ್</h3><small>ಕಾರ್ಮಿಕ ಸೇವೆಗಳು</small></span>
       </button>
-      <button class="service" data-search="ಆಯುಷ್ಮಾನ್ ayushman" data-service="ಆಯುಷ್ಮಾನ್ ಕಾರ್ಡ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಫೋಟೋ|OTP" onclick="selectService(this)">
-        <span class="service-icon">🏥</span><span><h3>ಆಯುಷ್ಮಾನ್ ಕಾರ್ಡ್</h3><small>ಆರೋಗ್ಯ ಯೋಜನೆ</small></span>
+      <button class="service" data-search="ayushman ayushman bharat health card" data-service="ಆಯುಷ್ಮಾನ್ ಕಾರ್ಡ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಫೋಟೋ|OTP" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://static.punjabkesari.in/multimedia/2026_4image_08_57_016010336w15.jpg" alt="ಆಯುಷ್ಮಾನ್ ಕಾರ್ಡ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಆಯುಷ್ಮಾನ್ ಕಾರ್ಡ್</h3><small>ಆರೋಗ್ಯ ಯೋಜನೆ</small></span>
       </button>
-      <button class="service" data-search="ಜಾತಿ ಆದಾಯ caste income" data-service="ಜಾತಿ ಮತ್ತು ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ" data-docs="TC|ಆಧಾರ್ ಕಾರ್ಡ್|ರೇಷನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
-        <span class="service-icon">📜</span><span><h3>ಜಾತಿ & ಆದಾಯ</h3><small>ಪ್ರಮಾಣಪತ್ರ</small></span>
+      <button class="service" data-search="caste income certificate caste certificate income certificate" data-service="ಜಾತಿ ಮತ್ತು ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ" data-docs="TC|ಆಧಾರ್ ಕಾರ್ಡ್|ರೇಷನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://i0.wp.com/imagesvs.oneindia.com/webp/kn/img/2025/08/rationcard-dp1111-1756639951.jpg?ssl=1&w=1170" alt="ಜಾತಿ ಮತ್ತು ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಜಾತಿ & ಆದಾಯ</h3><small>ಪ್ರಮಾಣಪತ್ರ</small></span>
       </button>
-      <button class="service" data-search="msme udyam ಉದ್ಯಮ" data-service="MSME / ಉದ್ಯಮ ನೋಂದಣಿ" data-docs="ಪ್ಯಾನ್ ಕಾರ್ಡ್|ಆಧಾರ್ ಕಾರ್ಡ್|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್" onclick="selectService(this)">
-        <span class="service-icon">🏢</span><span><h3>MSME / ಉದ್ಯಮ</h3><small>ನೋಂದಣಿ</small></span>
+      <button class="service" data-search="msme udyam udyog udyam registration msme registration business registration" data-service="MSME / ಉದ್ಯಮ ನೋಂದಣಿ" data-docs="ಪ್ಯಾನ್ ಕಾರ್ಡ್|ಆಧಾರ್ ಕಾರ್ಡ್|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://upload.wikimedia.org/wikipedia/commons/3/31/A_sample_of_Permanent_Account_Number_%28PAN%29_Card.jpg" alt="MSME / ಉದ್ಯಮ ನೋಂದಣಿ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>MSME / ಉದ್ಯಮ</h3><small>ನೋಂದಣಿ</small></span>
       </button>
-      <button class="service" data-search="police pcc ಪೊಲೀಸ್" data-service="ಪೊಲೀಸ್ ಕ್ಲಿಯರೆನ್ಸ್ ಸರ್ಟಿಫಿಕೇಟ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಪ್ಯಾನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
-        <span class="service-icon">👮</span><span><h3>ಪೊಲೀಸ್ ಕ್ಲಿಯರೆನ್ಸ್</h3><small>PCC</small></span>
+      <button class="service" data-search="police clearance pcc police certificate" data-service="ಪೊಲೀಸ್ ಕ್ಲಿಯರೆನ್ಸ್ ಸರ್ಟಿಫಿಕೇಟ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಪ್ಯಾನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://upload.wikimedia.org/wikipedia/commons/3/31/A_sample_of_Permanent_Account_Number_%28PAN%29_Card.jpg" alt="ಪೊಲೀಸ್ ಕ್ಲಿಯರೆನ್ಸ್ ಸರ್ಟಿಫಿಕೇಟ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಪೊಲೀಸ್ ಕ್ಲಿಯರೆನ್ಸ್</h3><small>PCC</small></span>
       </button>
-      <button class="service" data-search="pf uan" data-service="PF ಸೇವೆ" data-docs="UAN" onclick="selectService(this)">
-        <span class="service-icon">💼</span><span><h3>PF ಸೇವೆ</h3><small>UAN</small></span>
+      <button class="service" data-search="pf epf provident fund uan" data-service="PF ಸೇವೆ" data-docs="UAN" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://cdn.dotpe.in/longtail/store-items/7981751/3Y9uRcC5.jpeg" alt="PF ಸೇವೆ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>PF ಸೇವೆ</h3><small>UAN</small></span>
       </button>
-      <button class="service" data-search="nps pension" data-service="NPS" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಪ್ಯಾನ್ ಕಾರ್ಡ್|OTP" onclick="selectService(this)">
-        <span class="service-icon">📈</span><span><h3>NPS</h3><small>ಪಿಂಚಣಿ ಸೇವೆ</small></span>
+      <button class="service" data-search="nps pension national pension system" data-service="NPS" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಪ್ಯಾನ್ ಕಾರ್ಡ್|OTP" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://cdn.dotpe.in/longtail/store-items/7981751/3Y9uRcC5.jpeg" alt="NPS ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>NPS</h3><small>ಪಿಂಚಣಿ ಸೇವೆ</small></span>
       </button>
-      <button class="service" data-search="eshram e shram" data-service="e-Shram ಕಾರ್ಡ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್" onclick="selectService(this)">
-        <span class="service-icon">🧑‍🔧</span><span><h3>e-Shram ಕಾರ್ಡ್</h3><small>ನೋಂದಣಿ</small></span>
+      <button class="service" data-search="eshram e shram e-shram labour worker" data-service="e-Shram ಕಾರ್ಡ್" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Labor_card.jpg" alt="e-Shram ಕಾರ್ಡ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>e-Shram ಕಾರ್ಡ್</h3><small>ನೋಂದಣಿ</small></span>
       </button>
-      <button class="service" data-search="pm pension" data-service="PM ಪಿಂಚಣಿ ಯೋಜನೆ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಪ್ಯಾನ್ ಕಾರ್ಡ್|e-Shram ಕಾರ್ಡ್" onclick="selectService(this)">
-        <span class="service-icon">👴</span><span><h3>PM ಪಿಂಚಣಿ</h3><small>ಯೋಜನೆ</small></span>
+      <button class="service" data-search="pm pension pension scheme pension yojana" data-service="PM ಪಿಂಚಣಿ ಯೋಜನೆ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಪ್ಯಾನ್ ಕಾರ್ಡ್|e-Shram ಕಾರ್ಡ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://i0.wp.com/imagesvs.oneindia.com/webp/kn/img/2025/08/rationcard-dp1111-1756639951.jpg?ssl=1&w=1170" alt="PM ಪಿಂಚಣಿ ಯೋಜನೆ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>PM ಪಿಂಚಣಿ</h3><small>ಯೋಜನೆ</small></span>
       </button>
-      <button class="service" data-search="old age pension ವೃದ್ಧಾಪ್ಯ" data-service="ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ರೇಷನ್ ಕಾರ್ಡ್|ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ" onclick="selectService(this)">
-        <span class="service-icon">🧓</span><span><h3>ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ</h3><small>ಅರ್ಜಿ ಸೇವೆ</small></span>
+      <button class="service" data-search="old age pension senior citizen pension vridhapya pension" data-service="ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ರೇಷನ್ ಕಾರ್ಡ್|ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://i0.wp.com/imagesvs.oneindia.com/webp/kn/img/2025/08/rationcard-dp1111-1756639951.jpg?ssl=1&w=1170" alt="ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ</h3><small>ಅರ್ಜಿ ಸೇವೆ</small></span>
       </button>
-      <button class="service" data-search="railway bus ticket ರೈಲು ಬಸ್" data-service="ರೈಲ್ವೆ ಮತ್ತು ಬಸ್ ಟಿಕೆಟ್" data-docs="ಪ್ರಯಾಣದ ವಿವರಗಳು|ಪ್ರಯಾಣಿಕರ ವಿವರಗಳು" onclick="selectService(this)">
-        <span class="service-icon">🎫</span><span><h3>ಬಸ್ / ರೈಲು ಟಿಕೆಟ್</h3><small>ಬುಕ್ಕಿಂಗ್</small></span>
+      <button class="service" data-search="railway train bus ticket booking travel ticket" data-service="ರೈಲ್ವೆ ಮತ್ತು ಬಸ್ ಟಿಕೆಟ್" data-docs="ಪ್ರಯಾಣದ ವಿವರಗಳು|ಪ್ರಯಾಣಿಕರ ವಿವರಗಳು" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://d3pc1xvrcw35tl.cloudfront.net/images/1200x900/railway-tikit_201906252821.jpg" alt="ರೈಲ್ವೆ ಮತ್ತು ಬಸ್ ಟಿಕೆಟ್ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಬಸ್ / ರೈಲು ಟಿಕೆಟ್</h3><small>ಬುಕ್ಕಿಂಗ್</small></span>
       </button>
-      <button class="service" data-search="rtc" data-service="RTC ಸೇವೆ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಅಗತ್ಯ ಭೂ ದಾಖಲೆಗಳು" onclick="selectService(this)">
-        <span class="service-icon">📄</span><span><h3>RTC</h3><small>ಭೂ ದಾಖಲೆ ಸೇವೆ</small></span>
+      <button class="service" data-search="rtc land record pahani revenue land document" data-service="RTC ಸೇವೆ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಅಗತ್ಯ ಭೂ ದಾಖಲೆಗಳು" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://i0.wp.com/imagesvs.oneindia.com/webp/kn/img/2025/08/rationcard-dp1111-1756639951.jpg?ssl=1&w=1170" alt="RTC ಸೇವೆ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>RTC</h3><small>ಭೂ ದಾಖಲೆ ಸೇವೆ</small></span>
       </button>
-      <button class="service" data-search="money withdrawal ಹಣ" data-service="ಹಣ ವಿತ್‌ಡ್ರಾ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಬಯೋಮೆಟ್ರಿಕ್ / ಹೆಬ್ಬೆರಳಚ್ಚು" onclick="selectService(this)">
-        <span class="service-icon">💰</span><span><h3>ಹಣ ವಿತ್‌ಡ್ರಾ</h3><small>ಆಧಾರ್ ಆಧಾರಿತ</small></span>
+      <button class="service" data-search="money withdrawal cash withdrawal aadhaar withdrawal aePS aeps" data-service="ಹಣ ವಿತ್‌ಡ್ರಾ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ಬಯೋಮೆಟ್ರಿಕ್ / ಹೆಬ್ಬೆರಳಚ್ಚು" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://cdn.dotpe.in/longtail/store-items/7981751/3Y9uRcC5.jpeg" alt="ಹಣ ವಿತ್‌ಡ್ರಾ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಹಣ ವಿತ್‌ಡ್ರಾ</h3><small>ಆಧಾರ್ ಆಧಾರಿತ</small></span>
       </button>
-      <button class="service" data-search="marriage registration ಮದುವೆ" data-service="ವಿವಾಹ ನೋಂದಣಿ" data-docs="ಜನ್ಮ ದಿನಾಂಕದ ದಾಖಲೆ|ಆಧಾರ್ ಕಾರ್ಡ್|ವಿವಾಹ ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ" onclick="selectService(this)">
-        <span class="service-icon">💍</span><span><h3>ವಿವಾಹ ನೋಂದಣಿ</h3><small>ಮದುವೆ ನೋಂದಣಿ</small></span>
+      <button class="service" data-search="marriage registration marriage certificate wedding registration" data-service="ವಿವಾಹ ನೋಂದಣಿ" data-docs="ಜನ್ಮ ದಿನಾಂಕದ ದಾಖಲೆ|ಆಧಾರ್ ಕಾರ್ಡ್|ವಿವಾಹ ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://withswag.org/guides/images/india-passport-example.png" alt="ವಿವಾಹ ನೋಂದಣಿ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ವಿವಾಹ ನೋಂದಣಿ</h3><small>ಮದುವೆ ನೋಂದಣಿ</small></span>
       </button>
-      <button class="service" data-search="driving licence license" data-service="ಚಾಲನಾ ಪರವಾನಗಿ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ" onclick="selectService(this)">
-        <span class="service-icon">🚗</span><span><h3>ಡ್ರೈವಿಂಗ್ ಲೈಸೆನ್ಸ್</h3><small>ಚಾಲನಾ ಪರವಾನಗಿ</small></span>
+      <button class="service" data-search="driving licence driving license dl learner licence ll" data-service="ಚಾಲನಾ ಪರವಾನಗಿ" data-docs="ಆಧಾರ್ ಕಾರ್ಡ್|ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://cdnbbsr.s3waas.gov.in/s3d30960ce77e83d896503d43ba249caf7/uploads/bfi_thumb/2021110321-qnwxo01uhj4ajo5iyx438qhwngxjs2octdu90nnnba.jpg" alt="ಚಾಲನಾ ಪರವಾನಗಿ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ಡ್ರೈವಿಂಗ್ ಲೈಸೆನ್ಸ್</h3><small>ಚಾಲನಾ ಪರವಾನಗಿ</small></span>
       </button>
-      <button class="service" data-search="vehicle insurance ವಿಮೆ rc" data-service="ವಾಹನ ವಿಮೆ" data-docs="RC|ಫೋಟೋ|ಪ್ಯಾನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
-        <span class="service-icon">🛡️</span><span><h3>ವಾಹನ ವಿಮೆ</h3><small>Insurance</small></span>
+      <button class="service" data-search="vehicle insurance motor insurance car insurance bike insurance rc" data-service="ವಾಹನ ವಿಮೆ" data-docs="RC|ಫೋಟೋ|ಪ್ಯಾನ್ ಕಾರ್ಡ್" onclick="selectService(this)">
+        <span class="service-icon" style="padding:0;background:#f3f6f9;overflow:hidden"><img class="service-photo" src="https://imgv2-2-f.scribdassets.com/img/document/394950362/original/1aa5c29dea/1?v=1" alt="ವಾಹನ ವಿಮೆ ಮಾದರಿ ಚಿತ್ರ" loading="lazy" onerror="this.classList.add('img-hidden');this.parentElement.classList.add('image-fallback');"></span><span><h3>ವಾಹನ ವಿಮೆ</h3><small>Insurance</small></span>
       </button>
     </div>
 
@@ -204,7 +238,7 @@ footer strong{color:#fff}
 </main>
 
 <footer>
-  <div class="container">© 2026 <strong>ಜನಸೇವಾ ಕೇಂದ್ರ</strong> — ನಿಮ್ಮ ಸೇವೆ, ನಮ್ಮ ಜವಾಬ್ದಾರಿ.</div>
+  <div class="container">© 2026 <strong>Gramdevi CSE Center, Yellapur</strong> — ನಿಮ್ಮ ಸೇವೆ, ನಮ್ಮ ಜವಾಬ್ದಾರಿ.<br><span style="opacity:.9">ಮಾಲೀಕರು: ಮೋಹನ್ ನಾಯಕ್ (ಮಾಜಿ ಸೈನಿಕ)</span></div>
 </footer>
 
 <script>
@@ -242,13 +276,22 @@ function sendHelpWhatsApp(){
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank");
 }
 
+function normalize(value){
+  return value.toLowerCase()
+    .replace(/[\u2018\u2019\u201C\u201D]/g, "")
+    .replace(/[-_/]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function filterServices(){
   const q = document.getElementById("search").value.trim().toLowerCase();
   const cards = [...document.querySelectorAll(".service")];
   let count = 0;
   cards.forEach(card => {
-    const text = (card.dataset.search + " " + card.innerText).toLowerCase();
-    const show = !q || text.includes(q);
+    const text = normalize(card.dataset.search + " " + card.innerText);
+    const queryWords = normalize(q).split(/\s+/).filter(Boolean);
+    const show = !q || queryWords.every(word => text.includes(word));
     card.style.display = show ? "flex" : "none";
     if(show) count++;
   });
