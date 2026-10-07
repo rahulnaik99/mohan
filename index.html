@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ಸರ್ಕಾರಿ ಮತ್ತು ಆನ್‌ಲೈನ್ ಸೇವಾ ಕೇಂದ್ರ - ಆಧಾರ್, ಪ್ಯಾನ್, ಪಾಸ್‌ಪೋರ್ಟ್, ಪಿಂಚಣಿ, ವಿಮೆ ಮತ್ತು ಇತರೆ ಸೇವೆಗಳು">
+<title>ಜನಸೇವಾ ಕೇಂದ್ರ | ಎಲ್ಲಾ ಆನ್‌ಲೈನ್ ಸೇವೆಗಳು</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#0b5cab;--primary2:#083b73;--accent:#f59e0b;
+  --bg:#f5f8fc;--card:#fff;--text:#172033;--muted:#667085;
+  --border:#e5eaf0;--green:#12805c;
+}
+body{font-family:"Noto Sans Kannada","Nirmala UI","Tunga",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+
+/* Header */
+header{background:linear-gradient(135deg,var(--primary2),var(--primary));color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 4px 18px #0002}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:800;display:flex;align-items:center;gap:10px}
+.logo-icon{width:42px;height:42px;border-radius:12px;background:#fff2;display:grid;place-items:center;font-size:22px}
+nav{display:flex;gap:24px;font-size:15px;font-weight:600}
+nav a{opacity:.95}nav a:hover{color:#ffd166}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#083b73 0%,#0b5cab 58%,#1b75c9 100%);color:#fff;padding:68px 0 76px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:#fff1;right:-120px;top:-160px}
+.hero-content{position:relative;z-index:1;max-width:760px}
+.badge{display:inline-block;background:#fff1b8;color:#5b4100;padding:6px 13px;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:16px}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.2;margin-bottom:16px}
+.hero p{font-size:18px;max-width:650px;color:#e9f3ff}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:10px;font-weight:700;border:1px solid transparent}
+.btn-primary{background:#fff;color:var(--primary2)}
+.btn-outline{border-color:#ffffff66;color:#fff;background:#ffffff12}
+
+/* Search */
+.search-wrap{margin-top:-28px;position:relative;z-index:5}
+.search{background:#fff;border-radius:15px;box-shadow:0 10px 35px #173b5c20;padding:14px;display:flex;gap:10px}
+.search input{width:100%;border:0;outline:0;font-size:16px;padding:10px 12px;font-family:inherit}
+.search button{border:0;background:var(--primary);color:#fff;border-radius:9px;padding:0 20px;font-family:inherit;font-weight:700;cursor:pointer}
+
+/* Sections */
+section{padding:62px 0}
+.section-title{text-align:center;margin-bottom:32px}
+.section-title h2{font-size:30px;margin-bottom:7px}
+.section-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:22px;transition:.2s;box-shadow:0 4px 16px #13223808}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #13223812;border-color:#bdd4ed}
+.icon{width:46px;height:46px;border-radius:12px;background:#e9f3ff;color:var(--primary);display:grid;place-items:center;font-size:23px;margin-bottom:14px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
+.card ul{list-style:none;margin-top:12px;border-top:1px solid var(--border);padding-top:10px}
+.card li{font-size:14px;padding:3px 0;color:#465467}
+.card li:before{content:"✓";color:var(--green);font-weight:800;margin-right:7px}
+
+/* Highlight */
+.info{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.info-box{text-align:center;padding:18px}
+.info-box strong{display:block;font-size:20px;color:var(--primary)}
+.info-box span{color:var(--muted);font-size:14px}
+
+/* Contact */
+.contact{background:linear-gradient(135deg,#eef6ff,#fff)}
+.contact-box{background:#fff;border:1px solid var(--border);border-radius:18px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact h2{font-size:28px;margin-bottom:10px}
+.contact p{color:var(--muted)}
+.contact-list{margin-top:18px;display:grid;gap:10px}
+.contact-item{padding:12px 14px;background:#f7f9fc;border-radius:10px}
+.contact-item strong{display:block;color:var(--primary2)}
+.cta{display:flex;align-items:center;justify-content:center;background:var(--primary);color:#fff;border-radius:14px;padding:30px;text-align:center}
+.cta h3{font-size:24px;margin-bottom:8px}.cta p{color:#dcecff;margin-bottom:18px}
+
+/* Footer */
+footer{background:#092f58;color:#cfe0f2;padding:28px 0;text-align:center;font-size:14px}
+footer strong{color:#fff}
+
+.no-results{display:none;text-align:center;color:var(--muted);padding:25px;grid-column:1/-1}
+.wa-btn{
+  width:100%;margin-top:16px;border:0;border-radius:10px;padding:11px 12px;
+  background:#168c55;color:#fff;font-family:inherit;font-weight:800;
+  cursor:pointer;font-size:14px;transition:.2s;
+}
+.wa-btn:hover{background:#107444;transform:translateY(-1px)}
+
+
+@media(max-width:800px){
+ nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}
+ .contact-box{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .hero{padding:48px 0 62px}.grid{grid-template-columns:1fr}
+ .search{padding:9px}.search button{padding:0 13px}
+ section{padding:48px 0}.card{padding:19px}
+ .logo{font-size:18px}.logo-icon{width:36px;height:36px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">
+      <span class="logo-icon">🏛️</span>
+      <span>ಜನಸೇವಾ ಕೇಂದ್ರ</span>
+    </a>
+    <nav>
+      <a href="#services">ಸೇವೆಗಳು</a>
+      <a href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a>
+      <a href="#contact">ಸಂಪರ್ಕಿಸಿ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <span class="badge">ನಿಮ್ಮ ಸೇವೆ — ನಮ್ಮ ಜವಾಬ್ದಾರಿ</span>
+    <h1>ಎಲ್ಲಾ ಸರ್ಕಾರಿ ಮತ್ತು ಆನ್‌ಲೈನ್ ಸೇವೆಗಳು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ</h1>
+    <p>ಆಧಾರ್, ಪ್ಯಾನ್, ಪಾಸ್‌ಪೋರ್ಟ್, ಪಿಂಚಣಿ, ಪ್ರಮಾಣಪತ್ರ, ವಿಮೆ, ಟಿಕೆಟ್ ಬುಕ್ಕಿಂಗ್ ಸೇರಿದಂತೆ ವಿವಿಧ ಸೇವೆಗಳನ್ನು ಸುಲಭವಾಗಿ ಪಡೆಯಿರಿ.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#services">ಸೇವೆಗಳ ಪಟ್ಟಿ ನೋಡಿ</a>
+      <a class="btn btn-outline" href="#contact">ಸಂಪರ್ಕಿಸಿ</a>
+    </div>
+  </div>
+</section>
+
+<div class="container search-wrap">
+  <div class="search">
+    <input id="search" type="search" placeholder="ಸೇವೆ ಹುಡುಕಿ... ಉದಾ: ಆಧಾರ್, ಪ್ಯಾನ್, ಪಿಂಚಣಿ">
+    <button onclick="filterServices()">ಹುಡುಕಿ</button>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>ನಮ್ಮ ಸೇವೆಗಳು</h2>
+      <p>ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಸೇವೆಗಳನ್ನು ಪಡೆಯಿರಿ</p>
+    </div>
+
+    <div class="grid" id="serviceGrid">
+      <article class="card" data-search="ಪಾಸ್‌ಪೋರ್ಟ್ passport">
+        <div class="icon">🛂</div><h3>ಪಾಸ್‌ಪೋರ್ಟ್</h3>
+        <p>ಪಾಸ್‌ಪೋರ್ಟ್ ಅರ್ಜಿ ಮತ್ತು ಸಂಬಂಧಿತ ಸೇವೆಗಳು</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ವೋಟರ್ ಐಡಿ</li><li>ಪ್ಯಾನ್ ಕಾರ್ಡ್</li><li>SSLC ಅಂಕಪಟ್ಟಿ</li><li>ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="ಪ್ಯಾನ್ pan">
+        <div class="icon">💳</div><h3>ಪ್ಯಾನ್ ಕಾರ್ಡ್</h3>
+        <p>ಹೊಸ ಪ್ಯಾನ್ ಮತ್ತು ಸಂಬಂಧಿತ ಸೇವೆಗಳು</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಜನ್ಮ ದಿನಾಂಕದ ದಾಖಲೆ</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="ರೇಷನ್ ration">
+        <div class="icon">🪪</div><h3>ರೇಷನ್ ಕಾರ್ಡ್</h3>
+        <p>ರೇಷನ್ ಕಾರ್ಡ್ ಸಂಬಂಧಿತ ಸೇವೆಗಳು</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="ವೋಟರ್ voter election">
+        <div class="icon">🗳️</div><h3>ವೋಟರ್ ಐಡಿ</h3>
+        <p>ಹೊಸ ವೋಟರ್ ಐಡಿ ಮತ್ತು ತಿದ್ದುಪಡಿ</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="ಕರ್ಮಿಕ karmika ಕಾರ್ಮಿಕ">
+        <div class="icon">👷</div><h3>ಕರ್ಮಿಕ ಕಾರ್ಡ್</h3>
+        <p>ಕಾರ್ಮಿಕರಿಗೆ ಸಂಬಂಧಿಸಿದ ಸೇವೆಗಳು</p>
+        <ul><li>ಉದ್ಯೋಗ ಪ್ರಮಾಣಪತ್ರ</li><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್</li><li>ರೇಷನ್ ಕಾರ್ಡ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="ಆಯುಷ್ಮಾನ್ ayushman">
+        <div class="icon">🏥</div><h3>ಆಯುಷ್ಮಾನ್ ಕಾರ್ಡ್</h3>
+        <p>ಆರೋಗ್ಯ ಯೋಜನೆಗೆ ನೋಂದಣಿ</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಫೋಟೋ</li><li>OTP</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="ಜಾತಿ ಆದಾಯ caste income">
+        <div class="icon">📜</div><h3>ಜಾತಿ & ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ</h3>
+        <p>ಪ್ರಮಾಣಪತ್ರಗಳಿಗಾಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಕೆ</p>
+        <ul><li>TC</li><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ರೇಷನ್ ಕಾರ್ಡ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="msme udyam ಉದ್ಯಮ">
+        <div class="icon">🏢</div><h3>MSME / ಉದ್ಯಮ ನೋಂದಣಿ</h3>
+        <p>ವ್ಯವಹಾರ ನೋಂದಣಿ ಸೇವೆ</p>
+        <ul><li>ಪ್ಯಾನ್ ಕಾರ್ಡ್</li><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="police clearance pcc ಪೊಲೀಸ್">
+        <div class="icon">👮</div><h3>ಪೊಲೀಸ್ ಕ್ಲಿಯರೆನ್ಸ್ ಸರ್ಟಿಫಿಕೇಟ್</h3>
+        <p>PCC ಅರ್ಜಿ ಸಂಬಂಧಿತ ಸೇವೆ</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಪ್ಯಾನ್ ಕಾರ್ಡ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="pf uan provident">
+        <div class="icon">💼</div><h3>PF ಸೇವೆಗಳು</h3>
+        <p>EPFO / PF ಸಂಬಂಧಿತ ಸೇವೆಗಳು</p>
+        <ul><li>UAN</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="nps pension">
+        <div class="icon">📈</div><h3>NPS</h3>
+        <p>ರಾಷ್ಟ್ರೀಯ ಪಿಂಚಣಿ ವ್ಯವಸ್ಥೆ ಸಂಬಂಧಿತ ಸೇವೆಗಳು</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಪ್ಯಾನ್ ಕಾರ್ಡ್</li><li>OTP</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="ಆಧಾರ್ address update">
+        <div class="icon">📍</div><h3>ಆಧಾರ್ ಅಪ್‌ಡೇಟ್</h3>
+        <p>ವಿಳಾಸ ಬದಲಾವಣೆ ಮತ್ತು 10 ವರ್ಷ ಹಳೆಯ ಆಧಾರ್ ಅಪ್‌ಡೇಟ್</p>
+        <ul><li>ವಿಳಾಸದ ದಾಖಲೆ</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="e shram eshram">
+        <div class="icon">🧑‍🔧</div><h3>e-Shram ಕಾರ್ಡ್</h3>
+        <p>e-Shram ನೋಂದಣಿ ಸೇವೆ</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="pm pension ಪಿಂಚಣಿ">
+        <div class="icon">👴</div><h3>PM ಪಿಂಚಣಿ ಯೋಜನೆ</h3>
+        <p>ಪಿಂಚಣಿ ಯೋಜನೆಗೆ ಸಂಬಂಧಿಸಿದ ಸೇವೆಗಳು</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಪ್ಯಾನ್ ಕಾರ್ಡ್</li><li>e-Shram ಕಾರ್ಡ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="railway bus ticket ರೈಲ್ವೆ ಬಸ್ ಟಿಕೆಟ್">
+                <div class="icon">🎫</div><h3>ರೈಲ್ವೆ & ಬಸ್ ಟಿಕೆಟ್</h3>
+        <p>ಪ್ರಯಾಣ ಟಿಕೆಟ್ ಬುಕ್ಕಿಂಗ್ ಸೇವೆ</p>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="rtc">
+                <div class="icon">📄</div><h3>RTC</h3>
+        <p>RTC ಸಂಬಂಧಿತ ಆನ್‌ಲೈನ್ ಸೇವೆಗಳು</p>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="old age pension ವೃದ್ಧಾಪ್ಯ">
+        <div class="icon">🧓</div><h3>ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ</h3>
+        <p>ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ ಅರ್ಜಿ ಸೇವೆ</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ರೇಷನ್ ಕಾರ್ಡ್</li><li>ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="money withdrawal ಹಣ withdrawal">
+        <div class="icon">💰</div><h3>ಹಣ ವಿತ್‌ಡ್ರಾ</h3>
+        <p>ಆಧಾರ್ ಆಧಾರಿತ ಹಣ ವಿತ್‌ಡ್ರಾ</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ಬಯೋಮೆಟ್ರಿಕ್ / ಹೆಬ್ಬೆರಳಚ್ಚು</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="marriage registration ಮದುವೆ">
+        <div class="icon">💍</div><h3>ವಿವಾಹ ನೋಂದಣಿ</h3>
+        <p>ವಿವಾಹ ನೋಂದಣಿಗೆ ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿ</p>
+        <ul><li>ಜನ್ಮ ದಿನಾಂಕದ ದಾಖಲೆ</li><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ವಿವಾಹ ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="driving licence license driving">
+        <div class="icon">🚗</div><h3>ಚಾಲನಾ ಪರವಾನಗಿ</h3>
+        <p>Driving Licence ಸಂಬಂಧಿತ ಸೇವೆಗಳು</p>
+        <ul><li>ಆಧಾರ್ ಕಾರ್ಡ್</li><li>ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <article class="card" data-search="vehicle insurance ವಿಮೆ rc">
+        <div class="icon">🛡️</div><h3>ವಾಹನ ವಿಮೆ</h3>
+        <p>ವಾಹನ ವಿಮೆ ಸಂಬಂಧಿತ ಸೇವೆಗಳು</p>
+        <ul><li>RC</li><li>ಫೋಟೋ</li><li>ಪ್ಯಾನ್ ಕಾರ್ಡ್</li></ul>
+        <button class="wa-btn" onclick="sendWhatsApp(this)">📲 WhatsApp ಮೂಲಕ ಅರ್ಜಿ</button>
+      </article>
+
+      <div class="no-results" id="noResults">ಯಾವುದೇ ಸೇವೆ ಕಂಡುಬಂದಿಲ್ಲ.</div>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="about">
+  <div class="container info-grid">
+    <div class="info-box"><strong>20+</strong><span>ಸೇವೆಗಳು</span></div>
+    <div class="info-box"><strong>ಒಂದೇ ಸ್ಥಳ</strong><span>ಬಹು ಸರ್ಕಾರಿ ಸೇವೆಗಳು</span></div>
+    <div class="info-box"><strong>ಸರಳ ಪ್ರಕ್ರಿಯೆ</strong><span>ದಾಖಲೆ ಪರಿಶೀಲನೆ ಮತ್ತು ಅರ್ಜಿ ಸಹಾಯ</span></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-box">
+    <div>
+      <h2>ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h2>
+      <p>ನಿಮಗೆ ಬೇಕಾದ ಸೇವೆಯ ಬಗ್ಗೆ ಮಾಹಿತಿ ಪಡೆಯಲು ಸಂಪರ್ಕಿಸಿ.</p>
+      <div class="contact-list">
+        <div class="contact-item"><strong>📞 ಮೊಬೈಲ್</strong>  +91 XXXXX XXXXX</div>
+        <div class="contact-item"><strong>📍 ವಿಳಾಸ</strong> ನಿಮ್ಮ ಸೇವಾ ಕೇಂದ್ರದ ವಿಳಾಸ ಇಲ್ಲಿ ನಮೂದಿಸಿ</div>
+        <div class="contact-item"><strong>🕘 ಸಮಯ</strong> ಸೋಮವಾರ – ಶನಿವಾರ | ಬೆಳಿಗ್ಗೆ 9:00 – ಸಂಜೆ 7:00</div>
+      </div>
+    </div>
+    <div class="cta">
+      <div>
+        <h3>ಸೇವೆಗೆ ಇಂದೇ ಸಂಪರ್ಕಿಸಿ</h3>
+        <p>ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು ತೆಗೆದುಕೊಂಡು ಬನ್ನಿ.</p>
+        <a class="btn btn-primary" href="tel:+91XXXXXXXXXX">📞 ಕರೆ ಮಾಡಿ</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 <strong>ಜನಸೇವಾ ಕೇಂದ್ರ</strong> — ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+  </div>
+</footer>
+
+<script>
+function filterServices(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  const cards=[...document.querySelectorAll(".card")];
+  let count=0;
+  cards.forEach(card=>{
+    const text=(card.innerText+" "+card.dataset.search).toLowerCase();
+    const show=!q || text.includes(q);
+    card.style.display=show?"block":"none";
+    if(show) count++;
+  });
+  document.getElementById("noResults").style.display=count?"none":"block";
+}
+document.getElementById("search").addEventListener("input",filterServices);
+
+const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // ಇಲ್ಲಿ ನಿಮ್ಮ WhatsApp ನಂಬರ್ ಹಾಕಿ
+
+function sendWhatsApp(button){
+  const card = button.closest(".card");
+  const service = card.querySelector("h3")?.innerText.trim() || "ಸೇವೆ";
+  const docs = [...card.querySelectorAll("li")].map((li,i) =>
+    `${i+1}. ${li.innerText.trim()}`
+  );
+
+  let message = `ನಮಗೆ ${service} ಸೇವೆ ಬೇಕು\n`;
+  message += `ನಾವು ಈ ದಾಖಲೆಗಳನ್ನು ಕಳುಹಿಸುತ್ತೇವೆ:\n`;
+  if(docs.length){
+    message += docs.join("\n");
+  } else {
+    message += "ಅಗತ್ಯ ದಾಖಲೆಗಳ ಬಗ್ಗೆ ಮಾಹಿತಿ ನೀಡಿ.";
+  }
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+}
+
+</script>
+</body>
+</html>
